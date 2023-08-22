@@ -44,7 +44,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Eco_TechTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize()) {
                     MainPage()
                 }
@@ -55,45 +54,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainPage() {
-    Column {
-        Row (modifier = Modifier
-            .background(Color(0xFF3dd7b7))
-            .fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        )
-        {
-            /*Image(
-                painter = painterResource(id = R.drawable.logo_ecotech),
-                contentDescription = "Logo_EcoTech"
-            )*/
-
-            Button(
-                onClick = { /*TODO*/ },
-                colors = ButtonDefaults.buttonColors(Color.Transparent),
-                border = BorderStroke( 0.5.dp, Color.White),
-                shape = RoundedCornerShape(10.dp),
-                modifier = Modifier.padding(5.dp).width(75.dp)
-            )
-            {
-                Column (
-                    verticalArrangement = Arrangement.SpaceEvenly,
-                    horizontalAlignment = Alignment.Start,
-                    modifier = Modifier.height(50.dp).padding(0.dp)
-                ){
-                    Row (modifier = Modifier.height(4.dp).width(40.dp).background(Color.White)){}
-                    Row (modifier = Modifier.height(4.dp).width(40.dp).background(Color.White)){}
-                    Row (modifier = Modifier.height(4.dp).width(40.dp).background(Color.White)){}
-                }
-            }
-
-        }
-    }
+    Navbar()
 }
 
-@Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun GreetingPreview() {
+@Preview(showBackground = true, showSystemUi = true)
+fun MainPagePreview() {
     Eco_TechTheme {
         MainPage()
     }
