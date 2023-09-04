@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainPage() {
-    Navbar()
+    Navbar(false)
 }
 
 @Composable
