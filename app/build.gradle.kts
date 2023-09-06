@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.br.com.fiap.br.com.fiap.eco_tech"
+    namespace = "com.example.eco_tech"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.br.com.fiap.br.com.fiap.eco_tech"
+        applicationId = "com.example.eco_tech"
         minSdk = 27
         targetSdk = 33
         versionCode = 1
@@ -65,4 +65,5 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("androidx.navigation:navigation-compose:2.7.1")
 }

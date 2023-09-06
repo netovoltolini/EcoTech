@@ -38,6 +38,9 @@ import androidx.compose.material3.Shapes
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController as rememberNavController1
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,22 +48,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             Eco_TechTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    MainPage()
+
+                    val navController = rememberNavController1()
+                    NavHost(navController = navController, startDestination = "HomePage"){
+
+                        composable(route = "HomePage"){}
+
+                    }
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun MainPage() {
-    Navbar(false)
-}
 
-@Composable
-@Preview(showBackground = true, showSystemUi = true)
-fun MainPagePreview() {
-    Eco_TechTheme {
-        MainPage()
-    }
-}
